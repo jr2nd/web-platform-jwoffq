@@ -1,0 +1,21 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body ontouchstart="getTagname(event)">
+
+<h1>The TouchEvent's targetTouches Property</h1>
+
+<p>Touch any element on this page.</p>
+
+<p>The tag name of the current target is: <span id="demo"></span></p>
+
+<p><strong>Note:</strong> Touch events works for touch devices only.</p>
+
+<script>
+function getTagname(event) {
+  var x = event.targetTouches[0].target.tagName;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
